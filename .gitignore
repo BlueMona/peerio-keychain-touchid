@@ -1,0 +1,26 @@
+*.tmp
+*.log
+*.keystore
+.DS_Store
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# build release apk output
+/bin
+
+# npm and bower cache
+/bower_components
+/node_modules
+
+# compiled jsx
+/www
+
+# debug variables file with potentially sensitive info
+/debug.js
+
+# Cordova platform generated files
+/platforms/android/
+/platforms/ios/
+/plugins
+GENERATED_CHANGELOG.md
