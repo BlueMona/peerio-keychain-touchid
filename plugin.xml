@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="com.shazron.cordova.plugin.keychainutil"
-    version="2.0.0">
+    id="com.peerio.cordova.plugin.touchid"
+    version="1.0.0">
     <name>Peerio Keychain TouchID Plugin for Cordova iOS</name>
     <description>
 		This plugin gives the application ability to store arbitrary string data
 		protected by TouchID and retrieve it accordingly
 	</description>
     <license>Apache 2.0</license>
-    <keywords>keychain touchid</keywords>	
+    <keywords>keychain,touchid,peerio</keywords>	
     
     <engines>
-        <engine name="cordova" version=">=2.2.0" />
+        <engine name="cordova-ios" version=">=2.2.0" />
     </engines>
 	
-    <asset src="www/peerio-keychain-touchid.js" target="plugins/peerio-keychain-touchid.js" />
-
-	<js-module src="www/keychain.js" name="Keychain">
-    	<clobbers target="window.Keychain" />
+	<js-module src="www/peerio-keychain-touchid.js" name="PeerioTouchIdKeychain">
+    	<clobbers target="window.PeerioTouchIdKeychain" />
 	</js-module>
 	
     <!-- ios -->
     <platform name="ios">
-       
+		<config-file target="config.xml" parent="/*">
+			<feature name="PeerioTouchIdKeychain">
+				<param name="ios-package" value="PeerioTouchIdKeychain" />
+			</feature>
+		</config-file> 
+        <header-file src="src/ios/PeerioTouchIdKeychain.h" />
+        <source-file src="src/ios/PeerioTouchIdKeychain.m" />
+        <framework src="Security.framework" />
+        <framework src="Foundation.framework"/>
+        <framework src="LocalAuthentication.framework"/>
     </platform>
 </plugin>
