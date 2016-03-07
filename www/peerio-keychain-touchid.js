@@ -5,7 +5,11 @@ var PeerioTouchIdKeychain = {
     isFeatureAvailable: function() {
         console.log('testing availability');
         return new Promise(function(success, error) { 
-            exec(success, error, 'PeerioTouchIdKeychain', 'isFeatureAvailable');
+            try {
+                exec(success, error, 'PeerioTouchIdKeychain', 'isFeatureAvailable');
+            } catch(e) {
+                return Promise.reject(false);
+            }
         });
     },
 
