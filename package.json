@@ -1,0 +1,30 @@
+{
+  "name": "com.peerio.cordova.plugin.touchid",
+  "version": "1.0.0",
+  "description": "Cordova Camera Plugin",
+  "cordova": {
+    "id": "com.peerio.cordova.plugin.touchid",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeerioTechnologies/peerio-keychain-touchid"
+  },
+  "keywords": [
+    "cordova",
+    "peerio",
+    "touchid",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Samvel Avanesov",
+  "contributors": [
+      {
+          "name": "Samvel Avanesov",
+          "email": "seavan@gmail.com"
+      }
+  ],
+  "license": "MIT"
+}
