@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="com.peerio.cordova.plugin.touchid"
-    version="1.0.0">
+    version="1.1.0">
     <name>Peerio Keychain TouchID Plugin for Cordova iOS</name>
     <description>
 		This plugin gives the application ability to store arbitrary string data

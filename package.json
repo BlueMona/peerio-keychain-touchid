@@ -1,6 +1,6 @@
 {
   "name": "com.peerio.cordova.plugin.touchid",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Cordova Camera Plugin",
   "cordova": {
     "id": "com.peerio.cordova.plugin.touchid",
@@ -8,6 +8,7 @@
       "ios"
     ]
   },
+  "original": "yes",
   "repository": {
     "type": "git",
     "url": "https://github.com/PeerioTechnologies/peerio-keychain-touchid"

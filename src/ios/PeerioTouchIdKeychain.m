@@ -9,16 +9,9 @@
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             self.laContext = [[LAContext alloc] init];
             BOOL touchIDAvailable = [self.laContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:nil];
-
-            if(touchIDAvailable) {
-                CDVPluginResult* pluginResult = 
-                [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-                [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-            } else {
-                CDVPluginResult* pluginResult = 
-                [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: @"touchid is not available on the platform "];
-                [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-            }   
+            CDVPluginResult* pluginResult =
+            [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:touchIDAvailable];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     });
 }
 
